@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/reset.css">
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body class="body container">
+    <header></header>
+    <main>
+        <section></section>
+        <section class="contacts">
+            <div class="contacts__top">
+                <h2 class="section-title contacts__top-title">Let's empower growth</h2>
+                <img class="contacts__top-img" src="/img/png/form-img-2x.png" alt="">
+            </div>
+            <form action="" method="POST" class="contacts__bottom form">
+                
+                <label class="form__field form__grid-gap">
+                    <span class="form__field-text">What is your full name?</span>
+                    <input type="text" class="form__field-input" name="username" required>
+                </label>
+                <label class="form__field form__grid-gap">
+                    <span class="form__field-text">Telephone</span>
+                    <input type="tel" class="form__field-input" name="telephone" required>
+                </label>
+                <label class="form__field">
+                    <span class="form__field-text">What is your business email?</span>
+                    <input type="email" class="form__field-input" name="email" required>
+                </label>
+                <label class="form__field">
+                    <span class="form__field-text">Tell us more...</span>
+                    <textarea name="message" class="form__field-input form__field-input--nonresize"></textarea>
+                </label>
+                <label class="form__field-checkbox form__grid-checkbox">
+                    <input type="checkbox" name="rights" required class="form__checkbox">
+                    <span class="form__field-text">By checking this box, you are agreeing to our <a href="#">terms and conditions of service</a>.</span>
+                </label>
+                <button type="submit" class="form__button form__grid-button">Send request</button>
+            </form>
+        </section>
+    </main> 
+</body>
+</html>

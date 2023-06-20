@@ -1,0 +1,61 @@
+@import '../var/index.scss';
+@import '../mixin/index.scss';
+
+.form {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 30px 30px;
+
+    &__grid-gap {
+        margin-bottom: 30px;
+    }
+
+    &__button {
+        appearance: unset;
+        width: 100%;
+        height: 77px;
+        border: unset;
+        cursor: pointer;
+        background-color: $primary-orange;
+        border-radius: 61px;
+    }
+
+    &__grid-button {
+        grid-row: -2 / -1;
+        grid-column: 1 / -1;
+    }
+    &__grid-checkbox {
+        
+    }
+
+    &__field-checkbox {
+        display: flex;
+        align-items: center;
+    }
+
+    &__field-text {
+        @include form-text();
+    }
+
+    &__field-input {
+        display: block;
+        height: 44px;
+        width: 100%;
+        border: unset;
+        border-bottom: 1px solid $grayscale-white;
+        background-color: transparent;
+
+
+        &:focus,
+        &:active {
+            outline: none;
+        }
+
+        &--nonresize {
+            resize: none;
+
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.contacts {
+    &__top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 80px;
+    }
+
+    &__top-title {
+        width: 50%;
+        text-transform: uppercase;
+    }
+
+    &__top-img {
+        width: 234px;
+        height: 234px;
+        object-fit: contain;
+    }
+}

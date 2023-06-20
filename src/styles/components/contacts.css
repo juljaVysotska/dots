@@ -1,0 +1,16 @@
+.contacts__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+.contacts__top-title {
+  width: 50%;
+  text-transform: uppercase;
+}
+.contacts__top-img {
+  width: 234px;
+  height: 234px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}

@@ -1,0 +1,22 @@
+@import '../var/index.scss';
+@import '../mixin/index.scss';
+
+.body {
+    background-color: $primary-gray;
+}
+
+.container {
+    max-width: 1800px + 60px * 2;
+    margin: 0 auto;
+}
+
+
+.section-title {
+    font-family: $font-NeutralFace;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 90px;
+    line-height: 130%;
+    letter-spacing: 0.01em;
+    color: $grayscale-white;
+}

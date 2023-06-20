@@ -1,0 +1,28 @@
+{
+  "name": "test-task__brainlab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juljaVysotska/test-task__brainlab.git"
+  },
+  "author": "Julja Vysotska",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juljaVysotska/test-task__brainlab/issues"
+  },
+  "homepage": "https://github.com/juljaVysotska/test-task__brainlab#readme",
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.63.4"
+  }
+}

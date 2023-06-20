@@ -1,0 +1,6 @@
+$gutter: 30px;
+$margin: 60px;
+
+@function col($n) {
+    @return 100vw - 2 * $margin + $n * $gutter;
+}
