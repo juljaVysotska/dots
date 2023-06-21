@@ -50,6 +50,7 @@
   z-index: 1001;
   left: 50%;
   transform: translateX(-50%);
+  right: 50%;
   width: 50px;
   height: 16px;
   -webkit-appearance: none;
@@ -58,6 +59,7 @@
   border: unset;
   background: transparent;
   cursor: pointer;
+  transition: 0.5s right ease-in-out, 0.5s left ease-in-out;
 }
 .burger__line {
   height: 2px;
@@ -74,4 +76,19 @@
 .burger--open .burger__line:last-child {
   transform: rotate(-45deg);
   margin-top: -2px;
+}
+
+@media (max-width: 1260px) {
+  .header {
+    padding: 10px 20px;
+    height: 55px;
+  }
+  .header__button {
+    display: none;
+  }
+  .burger--open {
+    transform: translateX(0);
+    left: calc(100% - 60px);
+    right: 20px;
+  }
 }

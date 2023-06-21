@@ -1,7 +1,7 @@
 @import '../var/index.scss';
 @import '../mixin/index.scss';
 
-*{
+* {
     box-sizing: border-box;
 }
 
@@ -19,6 +19,13 @@ html {
     }
 }
 
+@media (max-width: 1260px) {
+    .body {
+        padding-top: 136px;
+        padding-bottom: 50px;
+    }
+}
+
 .container {
     max-width: 1800px + 60px * 2;
     padding-left: 60px;
@@ -26,15 +33,38 @@ html {
     margin: 0 auto;
 }
 
+@media (max-width: 1260px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}
+
 
 .section-title {
-    font-family: $font-NeutralFace;
+    font-family: $font-NeutralFace-Bold;
     font-style: normal;
     font-weight: 700;
     font-size: 90px;
     line-height: 130%;
     letter-spacing: 0.01em;
     color: $grayscale-white;
+
+}
+
+@media (max-width: 1600px) {
+    .section-title {
+        font-size: 90px * 0.8;
+        line-height: 130% * 0.8;
+    }
+}
+
+@media (max-width: 1260px) {
+    .section-title {
+        font-size: 42px;
+        line-height: 130%;
+    }
 }
 
 .title-h3 {
@@ -52,7 +82,7 @@ html {
     padding: 17px 30px;
     border: 1px solid $grayscale-white;
     border-radius: 60px;
-    transition: 0.3s  background-color ease-in-out, 0.3s border ease-in-out;
+    transition: 0.3s background-color ease-in-out, 0.3s border ease-in-out;
 
     &:hover {
         background-color: $grayscale-white-60;

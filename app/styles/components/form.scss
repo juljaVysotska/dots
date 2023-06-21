@@ -47,7 +47,8 @@
         align-items: center;
     }
 
-    &__field-text, &__field-link {
+    &__field-text,
+    &__field-link {
         @include form-text();
     }
 
@@ -80,10 +81,19 @@
 .checkbox {
     cursor: pointer;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    position: relative;
 
     &__text {
         margin-left: 20px;
+        color: $grayscale-white-60;
+        margin-top: 0;
+
+        * {
+
+            color: $grayscale-white-60;
+            border-bottom: 1px solid $grayscale-white-60;
+        }
     }
 
     &__input {
@@ -91,7 +101,9 @@
         height: 0;
         pointer-events: none;
         opacity: 0;
-        
+        position: absolute;
+        right: 0;
+        top: 0;
     }
 
     &__checkmark {
@@ -127,6 +139,27 @@
 
         &::before {
             opacity: 1;
+        }
+    }
+}
+
+@media (max-width: 1260px) {
+    .form {
+        grid-template-columns: 1fr;
+
+        &__grid-gap {
+            margin-bottom: 0;
+        }
+
+        &__grid-checkbox {
+            margin-top: 10px;
+        }
+    }
+
+    .checkbox {
+        &__text {
+            margin-left: 15px;
+            margin-top: 3px;
         }
     }
 }

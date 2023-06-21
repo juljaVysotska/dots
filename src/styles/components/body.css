@@ -39,6 +39,12 @@ html {
   overflow: hidden;
 }
 
+@media (max-width: 1260px) {
+  .body {
+    padding-top: 136px;
+    padding-bottom: 50px;
+  }
+}
 .container {
   max-width: 1920px;
   padding-left: 60px;
@@ -46,8 +52,14 @@ html {
   margin: 0 auto;
 }
 
+@media (max-width: 1260px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 .section-title {
-  font-family: "NeutralFace", Arial, sans-serif;
+  font-family: "NeutralFace Bold", Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 90px;
@@ -56,6 +68,18 @@ html {
   color: #ffffff;
 }
 
+@media (max-width: 1600px) {
+  .section-title {
+    font-size: 72px;
+    line-height: 104%;
+  }
+}
+@media (max-width: 1260px) {
+  .section-title {
+    font-size: 42px;
+    line-height: 130%;
+  }
+}
 .title-h3 {
   font-family: "NeutralFace Bold", Arial, sans-serif;
   font-style: normal;
@@ -66,6 +90,18 @@ html {
   color: #ffffff;
   text-transform: uppercase;
 }
+@media (max-width: 1600px) {
+  .title-h3 {
+    font-size: 44px;
+    line-height: 43.2px;
+  }
+}
+@media (max-width: 1260px) {
+  .title-h3 {
+    font-size: 28px;
+    line-height: 130%;
+  }
+}
 
 .main-text {
   font-family: "Manrope Light", Arial, sans-serif;
@@ -75,6 +111,18 @@ html {
   line-height: 150%;
   letter-spacing: 0.01em;
   color: #DADADB;
+}
+@media (max-width: 1600px) {
+  .main-text {
+    font-size: 16px;
+    line-height: 120%;
+  }
+}
+@media (max-width: 1260px) {
+  .main-text {
+    font-size: 15px;
+    line-height: 150%;
+  }
 }
 
 .button {
@@ -92,6 +140,18 @@ html {
   border: 1px solid #ffffff;
   border-radius: 60px;
   transition: 0.3s background-color ease-in-out, 0.3s border ease-in-out;
+}
+@media (max-width: 1600px) {
+  .button {
+    font-size: 11.2px;
+    line-height: 104%;
+  }
+}
+@media (max-width: 1260px) {
+  .button {
+    font-size: 12px;
+    line-height: 130%;
+  }
 }
 .button:hover {
   background-color: #99A8B1;

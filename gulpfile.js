@@ -2,21 +2,39 @@ const { src, dest, parallel, series, watch } = require('gulp');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass')(require('sass'));
 const autoprefixer = require('gulp-autoprefixer');
-const cssMin = require('gulp-cssmin');
+const beautify = require('gulp-beautify');
+const imagemin = require('gulp-imagemin');
 
 function buildHtml() {
     return src('./app/*.html')
-    .pipe(dest('./src/'))
+        .pipe(dest('./src/'))
+}
+
+function buildJS() {
+    return src('./app/js/**/*.js')
+        .pipe(beautify.js({ indent_size: 4 }))
+        .pipe(dest('./src/js/'))
+
 }
 
 function buildFonts() {
     return src('./app/fonts/**/*.*')
-    .pipe(dest('./src/fonts'))
+        .pipe(dest('./src/fonts'))
 }
 
 function buildImg() {
     return src('./app/img/**/*.*')
-    .pipe(dest('./src/img/'))
+        .pipe(imagemin([
+            imagemin.mozjpeg({ quality: 75, progressive: true }),
+            imagemin.optipng({ optimizationLevel: 5 }),
+            imagemin.svgo({
+                plugins: [
+                    { removeViewBox: true },
+                    { cleanupIDs: false }
+                ]
+            })
+        ]))
+        .pipe(dest('./src/img/'))
 }
 
 function buildStyles() {
@@ -42,17 +60,21 @@ function browserSyncReload(cb) {
 function watchTask() {
     watch('./app/*.html', series(buildHtml, browserSyncReload));
     watch(['./app/**/*.scss'], series(buildStyles, browserSyncReload));
+    watch(['./app/**/*.js'], series(buildJS, browserSyncReload));
 }
 exports.scss = buildStyles;
 exports.html = watchTask;
+exports.js = buildJS;
+exports.img = buildImg;
 
 exports.default = series(
-    buildHtml, 
+    buildHtml,
     buildImg,
     buildFonts,
     buildStyles,
+    buildJS,
     parallel(
         browserSyncInit,
         watchTask
-        )
+    )
 );
