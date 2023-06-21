@@ -1,0 +1,82 @@
+@import '../var/index.scss';
+@import '../mixin/index.scss';
+
+.slider-container {
+    position: relative;
+    height: 530px * 3;
+    margin-bottom: 167px;
+}
+
+.slide {
+    min-height: 530px;
+    // height: 530px;
+    position: sticky;
+    left: 0;
+    bottom: 0;
+    background-color: $primary-gray;
+    border-bottom: 1px solid $grayscale-white;
+    padding: 120px 60px 114px;
+
+    &:first-child {
+    border-top: 1px solid $grayscale-white;
+
+    }
+
+    @for $i from 1 through 3 {
+        &:nth-child(#{$i}) {
+            z-index: #{3 - $i};
+        }
+    }
+
+    &--flex {
+        display: flex;
+    }
+
+    &--chess &{
+        &__content {
+            order: 3;
+            margin-left: auto;
+            margin-right: 0;
+
+        }
+
+        &__img {
+            order: 2
+        }
+
+        &__number {
+            order: 0;
+        }
+    }
+
+    &__img {
+        max-width: 520px;
+        max-height: 410px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin-top: -60px;
+        margin-bottom: -54px;
+    }
+
+    &__content {
+        max-width: 733px;
+        margin-right: auto;
+    }
+
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    &__text {
+        margin-bottom: 60px;
+    }
+
+    &__number {
+        @include title-h3($primary-gray);
+        -webkit-text-stroke: 1px $grayscale-white-60;
+        min-width: 80px;
+        max-width: 245px;
+        width: 100%;
+    }
+}

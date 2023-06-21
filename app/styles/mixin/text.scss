@@ -7,3 +7,46 @@
     letter-spacing: 0.02em;
     color: $grayscale-white;
 }
+
+@mixin title-h3($color: $grayscale-white) {
+
+    font-family: $font-NeutralFace-Bold;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 54px;
+    letter-spacing: 0.01em;
+    color: $color;
+    text-transform: uppercase;
+}
+
+@mixin main-text() {
+    font-family: $font-Manrope-Light;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    color: $grayscale-white-85;
+}
+@mixin title-h4() {
+    font-family: $font-NeutralFace-Bold;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+    color: $grayscale-white;
+    text-transform: uppercase;
+}
+
+@mixin btn-text(){
+    font-family: $font-Manrope-Regular;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: $grayscale-white;
+}

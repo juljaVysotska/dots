@@ -6,7 +6,7 @@
 }
 @font-face {
   font-family: "NeutralFace Bold";
-  src: url("/fonts/NeutralFaceBold.woff2") format("woff2"), url("/fonts/NeutralFaceBold.woff") format("woff");
+  src: url("/fonts/NeutralFace/NeutralFace-Bold.woff2") format("woff2"), url("/fonts/NeutralFace/NeutralFace-Bold.woff") format("woff");
   font-style: normal;
   font-weight: 700;
 }
@@ -22,12 +22,27 @@
   font-style: normal;
   font-weight: 400;
 }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 .body {
   background-color: #060C12;
+  padding-top: 210px;
+  padding-bottom: 95px;
+}
+.body--hidden {
+  overflow: hidden;
 }
 
 .container {
   max-width: 1920px;
+  padding-left: 60px;
+  padding-right: 60px;
   margin: 0 auto;
 }
 
@@ -39,4 +54,46 @@
   line-height: 130%;
   letter-spacing: 0.01em;
   color: #ffffff;
+}
+
+.title-h3 {
+  font-family: "NeutralFace Bold", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 54px;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.main-text {
+  font-family: "Manrope Light", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: 0.01em;
+  color: #DADADB;
+}
+
+.button {
+  font-family: "Manrope Regular", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+  display: inline-block;
+  padding: 17px 30px;
+  border: 1px solid #ffffff;
+  border-radius: 60px;
+  transition: 0.3s background-color ease-in-out, 0.3s border ease-in-out;
+}
+.button:hover {
+  background-color: #99A8B1;
+  border: 1px solid #99A8B1;
 }

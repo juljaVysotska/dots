@@ -1,12 +1,28 @@
 @import '../var/index.scss';
 @import '../mixin/index.scss';
 
+*{
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 .body {
     background-color: $primary-gray;
+    padding-top: 210px;
+    padding-bottom: 95px;
+
+    &--hidden {
+        overflow: hidden;
+    }
 }
 
 .container {
     max-width: 1800px + 60px * 2;
+    padding-left: 60px;
+    padding-right: 60px;
     margin: 0 auto;
 }
 
@@ -19,4 +35,27 @@
     line-height: 130%;
     letter-spacing: 0.01em;
     color: $grayscale-white;
+}
+
+.title-h3 {
+    @include title-h3();
+}
+
+.main-text {
+    @include main-text();
+}
+
+.button {
+    @include btn-text();
+    text-align: center;
+    display: inline-block;
+    padding: 17px 30px;
+    border: 1px solid $grayscale-white;
+    border-radius: 60px;
+    transition: 0.3s  background-color ease-in-out, 0.3s border ease-in-out;
+
+    &:hover {
+        background-color: $grayscale-white-60;
+        border: 1px solid $grayscale-white-60;
+    }
 }

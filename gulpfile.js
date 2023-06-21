@@ -9,6 +9,11 @@ function buildHtml() {
     .pipe(dest('./src/'))
 }
 
+function buildFonts() {
+    return src('./app/fonts/**/*.*')
+    .pipe(dest('./src/fonts'))
+}
+
 function buildImg() {
     return src('./app/img/**/*.*')
     .pipe(dest('./src/img/'))
@@ -44,6 +49,7 @@ exports.html = watchTask;
 exports.default = series(
     buildHtml, 
     buildImg,
+    buildFonts,
     buildStyles,
     parallel(
         browserSyncInit,

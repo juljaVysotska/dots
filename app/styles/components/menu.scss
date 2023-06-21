@@ -1,0 +1,138 @@
+@import '../var/index.scss';
+@import '../mixin/index.scss';
+
+.menu {
+    width: 55%;
+    height: 100%;
+    background-color: $primary-gray;
+    position: fixed;
+    right: -100%;
+    top: 0;
+    z-index: 1000;
+    padding: 30px 60px 62px;
+    transition: 0.4s right ease-in-out;
+
+    &--open  {
+        right: 0;
+
+    }
+
+    &--open &{
+        &__list-item{
+            animation-name: appear;
+            animation-duration: 0.5s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-delay: 400ms;
+
+            @for $i from 1 through 3 {
+                &:nth-child(#{$i}) {
+                  animation-delay: #{$i * 300ms};
+                }
+              }
+              
+        }
+        &__footer{
+            animation-name: appearToBottom;
+            animation-duration: 0.5s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-delay: 1.2s;
+
+
+        }
+    }
+
+    &__list-item {
+        opacity: 0;
+    }
+
+    &__list-link {
+        @include title-h3();
+    }
+
+    &__list {
+        margin-top: 35vh;
+    }
+
+    &__list, &__footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__footer{
+        position: absolute;
+        bottom: 62px;
+        left: 60px;
+        right: 60px;
+        opacity: 0;
+    }
+
+
+
+    @keyframes appear {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes appearToBottom {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+}
+
+.contacts {
+    &__title {
+        margin-bottom: 20px;
+       @include title-h4();
+    }
+
+    &__social-container{
+        display: flex;
+    }
+    &__social-item {
+        margin-right: 20px;
+
+        &:last-child{
+            margin-right: 0
+        }
+    }
+
+    &__content{
+        @include form-text();
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        * {
+            color: $grayscale-white;
+        }
+    }
+}
+
+.social {
+    display: block;
+    width: 52px;
+    height: 52px;
+
+    &__icon {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+}

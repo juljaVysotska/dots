@@ -1,0 +1,68 @@
+@import '../var/index.scss';
+@import '../mixin/index.scss';
+
+.header {
+    padding: 30px 60px; //?
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    &__button {
+        margin-left: auto;
+        z-index: 1001;
+
+    }
+    transition: 0.3s all ease-in-out;
+
+    &--glass {
+        background: rgba(153, 168, 177, 0.15);
+        box-shadow: 0 4px 30px rgba($color: $primary-gray, $alpha: 0.1);
+        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(2px);
+    }
+   
+}
+
+.burger {
+    position: absolute;
+    z-index: 1001;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 16px;
+    appearance: none;
+    border: unset;
+    background: transparent;
+    cursor: pointer;
+
+    &__line {
+        height: 2px;
+        background-color: $grayscale-white;
+        width: 100%;
+        transition: 0.5s transform ease-in-out, 0.3s margin ease-in-out;
+
+        &:last-child{
+            margin-top: 12px;
+        }
+    }
+
+
+    &--open &{
+        &__line {
+
+            transform: rotate(45deg);
+
+            &:last-child {
+                transform: rotate(-45deg);
+                margin-top: -2px;
+
+            }
+        }
+
+    }
+}
