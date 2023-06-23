@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task - 1</title>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body class="body container">
+    <header class="header container">
+        <button class="burger">
+            <div class="burger__line"></div>
+            <div class="burger__line"></div>
+        </button>
+
+        <a href="#contacts" class="header__button button">contact us</a>
+    </header>
+    <main>
+        <section class="slider-container">
+            <article class="slide slide--flex">
+                <p class="slide__number">01</p>
+                <div class="slide__content">
+                    <h3 class="slide__title title-h3">Consultancy</h3>
+                    <p class="slide__text main-text">We help discover the right strategies for Web3 companies' set-ups,
+                        vision, and mission and navigate you through all the business stages, from kickstart ideation to
+                        turning concepts into cutting-edge solutions and matured business.</p>
+                    <a class="slide__button button" href="#">Book consultation</a>
+                </div>
+
+                <img class="slide__img" src="./img/jpg/slide-1-2x.jpg" alt="">
+            </article>
+            <article class="slide slide--flex slide--chess">
+                <p class="slide__number">02</p>
+                <div class="slide__content">
+                    <h3 class="slide__title title-h3">Infrastructure</h3>
+                    <p class="slide__text main-text">We're a are a dynamic hub of turn-key blockchain-based solutions
+                        that you may use for your product, whether it's trading platforms, distributed ledgers,
+                        DeFi or DAOs.</p>
+                    <a class="slide__button button" href="#">Explore</a>
+                </div>
+
+                <img class="slide__img" src="./img/jpg/slide-2-2x.jpg" alt="">
+            </article>
+            <article class="slide slide--flex">
+                <p class="slide__number">03</p>
+                <div class="slide__content">
+                    <h3 class="slide__title title-h3">Venture Capital</h3>
+                    <p class="slide__text main-text">Having solid relationships with traditional investment partners and
+                        advanced web3 investment ecosystems, crypto exchanges, accelerators and DAOs, we're a reliable
+                        partner to start your web3 project.</p>
+                    <a class="slide__button button" href="#">Let’s talk</a>
+                </div>
+
+                <img class="slide__img" src="./img/jpg/slide-3-2x.jpg" alt="">
+            </article>
+        </section>
+        <section class="contacts" id="contacts">
+            <div class="contacts__top">
+                <h2 class="section-title contacts__top-title">Let's empower growth</h2>
+                <img class="contacts__top-img" src="./img/png/form-img-2x.png" alt="">
+            </div>
+            <form class="contacts__bottom form">
+                <label class="form__field form__grid-gap">
+                    <span class="form__field-text">What is your full name?</span>
+                    <input type="text" class="form__field-input" name="username" required>
+                </label>
+                <label class="form__field form__grid-gap">
+                    <span class="form__field-text">Telephone</span>
+                    <input type="tel" class="form__field-input" name="telephone" required>
+                </label>
+                <label class="form__field">
+                    <span class="form__field-text">What is your business email?</span>
+                    <input type="email" class="form__field-input" name="email" required>
+                </label>
+                <label class="form__field">
+                    <span class="form__field-text">Tell us more...</span>
+                    <textarea name="message" class="form__field-input form__field-input--nonresize"></textarea>
+                </label>
+                <label class="checkbox form__grid-checkbox form__grid-gap">
+                    <input type="checkbox" name="rights" required class="checkbox__input">
+                    <span class="checkbox__checkmark"></span>
+                    <span class="form__field-text checkbox__text">By checking this box, you are agreeing to our <a
+                            href="#" class="form__field-link">terms and conditions of service</a>.</span>
+                </label>
+                <button type="submit" class="form__button form__grid-button">Send request</button>
+            </form>
+        </section>
+    </main>
+    <nav class="menu">
+        <ul class="menu__list">
+            <li class="menu__list-item"><a class="menu__list-link" href="#">Main</a></li>
+            <li class="menu__list-item"><a class="menu__list-link" href="#">Services</a></li>
+            <li class="menu__list-item"><a class="menu__list-link" href="3">About</a></li>
+        </ul>
+
+        <div class="menu__footer">
+            <address class="menu-contacts">
+                <h4 class="menu-contacts__title">Contact</h4>
+                <p class="menu-contacts__content">
+                    Email:
+                    <a href="mailto:hello@dotdots.net">hello@dotdots.net</a>
+                </p>
+                <p class="menu-contacts__content">
+                    Telegram:
+                    <a href="https://t.me/johnizaguirre">@johnizaguirre</a>
+                </p>
+            </address>
+            <address class="menu-contacts">
+                <h4 class="menu-contacts__title">GERMANY</h4>
+                <a class="menu-contacts__content" href="https://goo.gl/maps/D8w2KGozdnDXZbmS7">Potsdamer Str. 138<br>
+                    10783, Berlin</a>
+            </address>
+            <address class="menu-contacts">
+                <h4 class="menu-contacts__title menu-contacts__title--mobile-hidden">Social</h4>
+                <div class="menu-contacts__social-container">
+                    <a href="#" class="social menu-contacts__social-item">
+                        <img class="social__icon" src="./img/svg/icon-linkedin.svg" alt="">
+                    </a>
+                    <a href="#" class="social menu-contacts__social-item">
+                        <img class="social__icon" src="./img/svg/icon-medium.svg" alt="">
+                    </a>
+                </div>
+            </address>
+
+            <a href="#contacts" class="menu__button button">contact us</a>
+
+        </div>
+    </nav>
+
+    <script src="./js/script.js"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="./js/mask-setup.js"></script>
+</body>
+
+</html>

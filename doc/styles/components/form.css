@@ -1,0 +1,179 @@
+@font-face {
+  font-family: "NeutralFace";
+  src: url("../fonts/NeutralFace/NeutralFace.woff2") format("woff2"), url("../fonts/NeutralFace/NeutralFace.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "NeutralFace Bold";
+  src: url("../fonts/NeutralFace/NeutralFace-Bold.woff2") format("woff2"), url("../fonts/NeutralFace/NeutralFace-Bold.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Manrope Light";
+  src: url("../fonts/Manrope/Manrope-Light.woff2") format("woff2"), url("../fonts/Manrope/Manrope-Light.woff") format("woff");
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Manrope Regular";
+  src: url("../fonts/Manrope/Manrope-Regular.woff2") format("woff2"), url("../fonts/Manrope/Manrope-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px 30px;
+}
+.form__grid-gap {
+  margin-bottom: 30px;
+}
+.form__button {
+  -webkit-appearance: unset;
+     -moz-appearance: unset;
+          appearance: unset;
+  width: 100%;
+  height: 77px;
+  border: unset;
+  cursor: pointer;
+  background-color: #F95A00;
+  border-radius: 61px;
+  font-family: "NeutralFace", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  text-align: center;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.form__grid-button {
+  grid-column: 1/-1;
+}
+.form__grid-checkbox {
+  display: flex;
+  justify-content: center;
+  grid-column: 1/-1;
+}
+.form__field-checkbox {
+  display: flex;
+  align-items: center;
+}
+.form__field-text, .form__field-link {
+  font-family: "Manrope Regular", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+@media (max-width: 1260px) {
+  .form__field-text, .form__field-link {
+    font-size: 14px;
+    line-height: 130%;
+  }
+}
+.form__field-link {
+  border-bottom: 1px solid #ffffff;
+}
+.form__field-input {
+  display: block;
+  height: 44px;
+  width: 100%;
+  border: unset;
+  border-bottom: 1px solid #ffffff;
+  background-color: transparent;
+  font-family: "Manrope Regular", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+.form__field-input:focus, .form__field-input:active {
+  outline: none;
+}
+@media (max-width: 1260px) {
+  .form__field-input {
+    font-size: 14px;
+    line-height: 130%;
+  }
+}
+.form__field-input--nonresize {
+  resize: none;
+}
+
+.checkbox {
+  cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+}
+.checkbox__text {
+  margin-left: 20px;
+  color: #99A8B1;
+  margin-top: 0;
+}
+.checkbox__text * {
+  color: #99A8B1;
+  border-bottom: 1px solid #99A8B1;
+}
+.checkbox__input {
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.checkbox__checkmark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 2px;
+  border: 1px solid #99A8B1;
+  transition: 0.3s border ease-in-out, 0.3s background-color ease-in-out;
+}
+.checkbox__checkmark::before {
+  content: "";
+  display: block;
+  width: 13px;
+  height: 6px;
+  border-bottom: 3px solid #ffffff;
+  border-left: 3px solid #ffffff;
+  transform: rotate(-45deg);
+  margin-top: -5px;
+  opacity: 0;
+  transition: 0.3s opacity ease-in-out 0.1s;
+}
+.checkbox__input:checked + .checkbox__checkmark {
+  background-color: #F95A00;
+  border: 1px solid #F95A00;
+}
+.checkbox__input:checked + .checkbox__checkmark::before {
+  opacity: 1;
+}
+
+@media (max-width: 1260px) {
+  .form {
+    grid-template-columns: 1fr;
+  }
+  .form__grid-gap {
+    margin-bottom: 0;
+  }
+  .form__grid-checkbox {
+    margin-top: 10px;
+  }
+  .checkbox__text {
+    margin-left: 15px;
+    margin-top: 3px;
+  }
+}
