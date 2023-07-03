@@ -1,3 +1,3 @@
-# Test task - 1
+# Dots
 
 All needed data locates into `src` folder.
